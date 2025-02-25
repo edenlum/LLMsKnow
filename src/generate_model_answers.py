@@ -502,7 +502,7 @@ def main():
         else:
             all_questions = preprocess_fn(args.model, all_questions, labels)
 
-    model_answers, input_output_ids, all_scores, all_output_ids = generate_model_answers(all_questions, model,
+    model_answers, input_output_ids, all_scores, all_output_ids = generate_model_answers(all_questions[:10], model,
                                                                                          tokenizer, device, args.model,
                                                                                          output_scores=True, max_new_tokens=max_new_tokens,
                                                                                          stop_token_id=stop_token_id)
